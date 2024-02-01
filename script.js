@@ -1,9 +1,4 @@
-function getComputerChoice(choices) {
-    choices = ["rock", "paper", "scissors"];
-    console.log(choices[(Math.floor(Math.random() * choices.length))]);
-}
-
-//Get input for playerSelection
+// Get input for playerSelection. (Must be case-insensitive)
 function playerSelection(playerChoice) {
     playerChoice = prompt("Rock, Paper or Scissors?", "");
     playerChoice = playerChoice.toLowerCase();
@@ -15,15 +10,21 @@ function playerSelection(playerChoice) {
     else {
         playerSelection();
     }
-
 }
-//Get computerSelection from getComputerChoice
+
+// Pick randomly from select options for the computer
+function getComputerChoice(choices) {
+    choices = ["rock", "paper", "scissors"];
+    console.log(choices[(Math.floor(Math.random() * choices.length))]);
+    return choices;
+}
 
 
-//Create function for playRound
+// Get computerSelection from getComputerChoice
 
 
+// Create function for playRound
 
-getComputerChoice();
 playerSelection();
+getComputerChoice();
 
