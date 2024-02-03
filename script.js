@@ -1,3 +1,4 @@
+// Initiating starting scores
 let playerScore = 0;
 let computerScore = 0;
 
@@ -21,13 +22,13 @@ function getComputerChoice(computerChoice) {
 }
 
 
-
+// Main play game function
 function playGame() {
 
     let rounds = 1;
     playRound();
 
-    // Function for playRound
+    // Function for playing a single round
     function playRound() {
         while (rounds <=5) {
 
@@ -78,6 +79,7 @@ function playGame() {
     }
 }
 
+// Determines who is the winner
 function scoring(){
     if (playerScore > computerScore) {
         console.log("After 5 rounds - You beat the computer!")
